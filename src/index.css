@@ -77,3 +77,14 @@ h4{
 .input{
   margin: 5px;
 } 
+
+
+.MuiInputBase-adornedStart	{
+  background-color: #f8f9fd 
+  ;
+}
+
+.MuiInputBase-adornedStart :nth-child(2){
+  background-color: white;
+}
+
