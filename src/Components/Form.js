@@ -5,10 +5,27 @@ import Purpose from "./Purpose";
 import OnBoard from "./OnBoard";
 import Welcome from "./Welcome";
 import { Box } from "@mui/system";
+import ProgressStepper from "./ProgressStepper";
 
 export default function Form() {
   const [page, setPage] = useState(0);
+  /////////////////////////////////////////////////////////////////////
+  //   const steps = ["Label 1", "Label 2", "Label 3", "Label 4"];
 
+  //   const [activeStep, setActiveStep] = React.useState(0);
+  //   const [progress, setProgress] = React.useState(50);
+
+  //   const handleNext = () => {
+  //     // progress < 100 ? setProgress((prev) => prev + 150) : nextStep();
+  //     setProgress((prev) => prev + 200);
+  //     nextStep();
+  //   };
+
+  //   const nextStep = () => {
+  //     setProgress(0);
+  //     setActiveStep((prev) => prev + 1);
+  //   };
+  /////////////////////////////////////////////////////////////////////
   //   const FormStage = ["Welcome", "WorkSpace", "Purpose", "OnBoard"];
 
   const handleClick = () => {
@@ -28,10 +45,21 @@ export default function Form() {
 
   return (
     <Box sx={{ justifyContent: "center" }}>
-      …{/* // <FormControl className="form"> */}
-      {/* <FormControl className="form"> */}
-      {/* <div className="progressbar"> */}
       <h1 className="heading">Eden</h1>
+      {/* //////////////////////////////////////////////////////////////////// */}
+      {/* <div>
+        <ProgressStepper
+          steps={steps}
+          current={activeStep}
+          progress={progress}
+        />
+        <div>
+          <Button variant="contained" color="primary" onClick={handleNext}>
+            {activeStep === steps.length - 1 ? "Finish" : "Next"}
+          </Button>
+        </div>
+      </div> */}
+      {/* //////////////////////////////////////////////////////////////////////// */}
       <div className="body">{DisplayPage()}</div>
       <div className="footer">
         <Button
@@ -49,9 +77,15 @@ export default function Form() {
           Create Workspace
         </Button>{" "}
       </div>
-      {/* </div> */}
-      {/* </FormControl> */}
-      {/* </FormControl> */}
     </Box>
   );
 }
+
+/////////////////////
+
+// export default function HorizontalLinearStepper() {
+
+//   return (
+
+//   );
+// }

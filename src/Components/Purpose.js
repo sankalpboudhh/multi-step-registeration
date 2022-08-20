@@ -1,49 +1,35 @@
-import { FormControl, OutlinedInput } from "@mui/material";
+import {
+  Avatar,
+  Button,
+  FormControl,
+  FormLabel,
+  OutlinedInput,
+  Radio,
+  radioClasses,
+  RadioGroup,
+  TextField,
+} from "@mui/material";
+import Sheet from "@mui/joy/Sheet";
+import CheckCircleRoundedIcon from "@mui/icons-material/CheckCircleRounded";
+import { Person } from "@mui/icons-material";
+// import PersonIcon from "@mui/icons-material/Person";
+import GroupsIcon from "@mui/icons-material/Groups";
 import React from "react";
+import { Box } from "@mui/system";
+import IconsRadio from "./radio";
 
 export default function Purpose() {
   return (
-    <div>
-      <FormControl className="body">
-        <div className="progressbar"></div>
-        <div>
-          <h1>Welcome! Test sasdasdasdsadds teste</h1>
-        </div>
-        <div>
-          <h4 className="lighter sub-heading">
-            You can always change them later.
-          </h4>
-        </div>
-        <div>
-          <span>Full Name</span>
-        </div>
-        <div className="content">
-          <OutlinedInput
-            style={{
-              alignItems: "center",
+    // <Box>
+    <FormControl className="body">
+      <h1>How are you planning to use Eden</h1>
 
-              //   margin: "5px ",
-              maxWidth: "400px",
-              minWidth: "400px",
-            }}
-            placeholder="Steve Jobs"
-          />
-        </div>
-        <div>
-          <div>Display Name</div>
-          <div className="content">
-            <OutlinedInput
-              style={{
-                alignItems: "center",
+      <h4 className="lighter">
+        We'll streamline your setup experience accordingly.
+      </h4>
 
-                maxWidth: "400px",
-                minWidth: "400px",
-              }}
-              placeholder="Steve"
-            />
-          </div>
-        </div>
-      </FormControl>
-    </div>
+      <IconsRadio />
+    </FormControl>
+    // </Box>
   );
 }

@@ -17,37 +17,19 @@ code {
   display: flex;
   align-items: center;
   justify-content: center;
-  ;
-  /* min-width: 70px; */
   min-height: 70vh;
-  /* text-align: center; */
-  /* display: inline-block; */
-
-  /* min-width: 100vh; */
+  
 }
-/* ///// */
-/* .body{
-  font-family: Inter;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* min-width: 70px; */
-  /* text-align: center;
 
-  min-height: 70vh;
-}  */
-
-
-
-/* ////// */
 .body{
   display: flex;
   justify-content: center;
   align-items: center;
+  /* min-height: 70vh; */
 }
 .body .tag{
   
-  align-self: flex-start;
+  /* align-self: flex-start; */
   margin-left: 5px;
 }
 .heading, .footer {
@@ -63,12 +45,7 @@ h4{
   margin-top: 0;
   margin-bottom: 50px;
 }
-/* .sub-heading{
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-} */
 .lighter {
   color: grey;
 }
@@ -86,5 +63,18 @@ h4{
 
 .MuiInputBase-adornedStart :nth-child(2){
   background-color: white;
+  padding-left: inherit;
 }
 
+.JoyRadioGroup-root{
+  max-width: 400px;
+  max-height: 200px; 
+}
+
+.JoyRadioGroup-root:last-child:checked{
+  color: #664de5;
+}
+
+.radiosan {
+  color: #664de5;
+}
