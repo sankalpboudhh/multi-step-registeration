@@ -11,13 +11,13 @@ import logo from "./EdenLogo.png";
 export default function Form() {
   const [page, setPage] = useState(0);
   /////////////////////////////////////////////////////////////////////
-  //   const steps = ["Label 1", "Label 2", "Label 3", "Label 4"];
+  const steps = ["Welcome", "WorkSpace", "Purpose", "OnBoard"];
 
-  //   const [activeStep, setActiveStep] = React.useState(0);
-  //   const [progress, setProgress] = React.useState(50);
+  const [activeStep, setActiveStep] = React.useState(0);
+  const [progress, setProgress] = React.useState(50);
 
   //   const handleNext = () => {
-  //     // progress < 100 ? setProgress((prev) => prev + 150) : nextStep();
+  // progress < 100 ? setProgress((prev) => prev + 150) : nextStep();
   //     setProgress((prev) => prev + 200);
   //     nextStep();
   //   };
@@ -31,7 +31,16 @@ export default function Form() {
 
   const handleClick = () => {
     setPage((curr) => curr + 1);
+    setProgress((prev) => prev + 200);
+    nextStep();
   };
+
+  const nextStep = () => {
+    setProgress(0);
+    setActiveStep((prev) => prev + 1);
+  };
+
+  //   };
   const DisplayPage = () => {
     if (page === 0) {
       return <Welcome />;
@@ -52,37 +61,46 @@ export default function Form() {
         </h1>
       </div>
       {/* //////////////////////////////////////////////////////////////////// */}
-      {/* <div>
-        <ProgressStepper
-          steps={steps}
-          current={activeStep}
-          progress={progress}
-        />
-        <div>
+
+      <div>
+        <Box sx={{ justifyContent: "center" }}>
+          <ProgressStepper
+            style={{ position: "relative" }}
+            steps={steps}
+            current={activeStep}
+            progress={progress}
+          />
+        </Box>
+
+        {/* <div>
           <Button variant="contained" color="primary" onClick={handleNext}>
             {activeStep === steps.length - 1 ? "Finish" : "Next"}
           </Button>
+        </div> */}
+        {/* </div> */}
+        {/* //////////////////////////////////////////////////////////////////////// */}
+        <div className="body">{DisplayPage()}</div>
+        <div className="footer">
+          <Button
+            type="submit"
+            style={{
+              backgroundColor: "#664de5",
+              alignItems: "center",
+              minHeight: "45px",
+              minWidth: "400px",
+              marginTop: "20px",
+              textTransform: "none",
+            }}
+            variant="contained"
+            onClick={handleClick}
+          >
+            {activeStep === steps.length - 1
+              ? "Launch Eden"
+              : "Create Workspace"}
+            {/* {page === 3 ? "Launch Eden" : "Create Workspace"} */}
+            {/* Create Workspace */}
+          </Button>{" "}
         </div>
-      </div> */}
-      {/* //////////////////////////////////////////////////////////////////////// */}
-      <div className="body">{DisplayPage()}</div>
-      <div className="footer">
-        <Button
-          type="submit"
-          style={{
-            backgroundColor: "#664de5",
-            alignItems: "center",
-            minHeight: "45px",
-            minWidth: "400px",
-            marginTop: "20px",
-            textTransform: "none",
-          }}
-          variant="contained"
-          onClick={handleClick}
-        >
-          {page === 3 ? "Launch Eden" : "Create Workspace"}
-          {/* Create Workspace */}
-        </Button>{" "}
       </div>
     </Box>
   );
