@@ -63,6 +63,7 @@ export default function Form() {
       <div className="body">{DisplayPage()}</div>
       <div className="footer">
         <Button
+          type="submit"
           style={{
             backgroundColor: "#664de5",
             alignItems: "center",
@@ -80,12 +81,3 @@ export default function Form() {
     </Box>
   );
 }
-
-/////////////////////
-
-// export default function HorizontalLinearStepper() {
-
-//   return (
-
-//   );
-// }

@@ -71,10 +71,6 @@ h4{
   max-height: 200px; 
 }
 
-.JoyRadioGroup-root:last-child:checked{
-  color: #664de5;
-}
-
-.radiosan {
-  color: #664de5;
+.MuiSvgIcon::after{
+  color: red;
 }
