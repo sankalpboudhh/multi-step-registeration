@@ -75,7 +75,8 @@ export default function Form() {
           variant="contained"
           onClick={handleClick}
         >
-          Create Workspace
+          {page === 3 ? "Launch Eden" : "Create Workspace"}
+          {/* Create Workspace */}
         </Button>{" "}
       </div>
     </Box>
