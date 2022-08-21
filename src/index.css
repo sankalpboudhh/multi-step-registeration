@@ -71,6 +71,8 @@ h4{
   max-height: 200px; 
 }
 
-.MuiSvgIcon::after{
-  color: red;
+
+.circleCheck{
+  padding: 71px;
+  transform: scale(3);
 }

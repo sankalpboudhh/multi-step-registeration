@@ -7,7 +7,6 @@ import IconsRadio from "./Components/radio";
 
 function App() {
   return <Form />;
-  // return <Icons />;
 }
 
 export default App;

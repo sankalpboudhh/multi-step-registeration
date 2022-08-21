@@ -7,9 +7,12 @@ export default function Purpose() {
   return (
     // <Box>
     <FormControl className="body">
-      <Sheet sx={{ color: "#664de5" }}>
-        <CheckCircleIcon fontSize="large" />
-      </Sheet>
+      <div>
+        <Sheet sx={{ color: "#664de5" }}>
+          <CheckCircleIcon className="circleCheck" />
+        </Sheet>
+      </div>
+
       <h1>Congratulations, Eren</h1>
 
       <h4 className="lighter">

@@ -24,7 +24,7 @@ export default function Purpose() {
     <FormControl className="body">
       <h1>How are you planning to use Eden</h1>
 
-      <h4 className="lighter">
+      <h4 className="lighter" style={{ marginBottom: "20px" }}>
         We'll streamline your setup experience accordingly.
       </h4>
 

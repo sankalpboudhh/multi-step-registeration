@@ -6,6 +6,7 @@ import OnBoard from "./OnBoard";
 import Welcome from "./Welcome";
 import { Box } from "@mui/system";
 import ProgressStepper from "./ProgressStepper";
+import logo from "./EdenLogo.png";
 
 export default function Form() {
   const [page, setPage] = useState(0);
@@ -45,7 +46,11 @@ export default function Form() {
 
   return (
     <Box sx={{ justifyContent: "center" }}>
-      <h1 className="heading">Eden</h1>
+      <div>
+        <h1 className="heading">
+          <img src={logo} alt={"logo"} width="50" height="50"></img>Eden
+        </h1>
+      </div>
       {/* //////////////////////////////////////////////////////////////////// */}
       {/* <div>
         <ProgressStepper
